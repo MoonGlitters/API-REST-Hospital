@@ -29,6 +29,7 @@ Tiene implementado 2 content-type:
 
 Retorna todos los doctores
 
+Respuesta:
 ```
 [{
     "nombre_completo": "Carlos Méndez Rojas", 
@@ -69,7 +70,7 @@ Crea un nuevo doctor
 3. Todos los campos son requeridos
 4. No se permite duplicar RUN.
 
-Respuesta
+Respuesta:
 
 ```
 {
@@ -127,7 +128,7 @@ Validaciones:
 3. Todos los campos son requeridos.
 4. No se permite duplicar RUN.
 
-Respuesta
+Respuesta:
 
 ```
 {
@@ -145,7 +146,7 @@ Respuesta
 
 Elimina un doctor según su indice.
 
-Respuesta
+Respuesta:
 
 ```
 {
@@ -173,6 +174,7 @@ Tiene implementado 2 content-type:
 - text/plain = retorna un template con todas las madres
 - application/json = retorna todas las madres en formato JSON
 
+Respuesta:
 ```
 [{
     "nombre_completo": "María Torres",
@@ -238,6 +240,7 @@ Tiene implementado 2 content-type:
 - text/plain = retorna un template con una madre por su indice
 - application/json = retorna una madre por su indice en formato JSON
 
+Respuesta:
 ```
 {
     "nombre_completo": "Claudia Martínez",
@@ -281,7 +284,7 @@ Respuesta
 
 Elimina una madre según su indice.
 
-Respuesta
+Respuesta:
 ```
 {
     "message": "Madre eliminada",
@@ -307,6 +310,7 @@ Tiene implementado 2 content-type:
 - text/plain = retorna un template con todos los partos
 - application/json = retorna todos los partos en formato JSON
 
+Respuesta:
 ```
 [{
     "doctor": {
@@ -392,6 +396,7 @@ Tiene implementado 2 content-type:
 - text/plain = retorna un template con un parto por su indice
 - application/json = retorna un parto por su indice en formato JSON
 
+Respuesta:
 ```
 {
     "doctor": {
@@ -437,7 +442,7 @@ Validaciones:
 4. Todos los campos son requeridos.
 5. Tipo de parto admitidos ( normal, cesarea )
 
-Respuesta
+Respuesta:
 ```
 {
     "message": "Actualización exitosa", 
@@ -466,7 +471,7 @@ Respuesta
 
 Elimina un parto según su indice.
 
-Respuesta
+Respuesta:
 ```
 {
     "message": "Parto eliminado",
@@ -505,6 +510,7 @@ Tiene implementado 2 content-type:
 - text/plain = retorna un template con todos los nacidos
 - application/json = retorna todos los nacidos en formato JSON
 
+Respuesta:
 ```
 [{
     "parto": {
@@ -554,6 +560,8 @@ Validaciones:
 4. Todos los campos son requeridos.
 5. Peso debe estar entre el rango 0.1 a 10 kg
 
+Respuesta:
+
 ```
 {
     "message": "Creación exitosa", 
@@ -595,6 +603,8 @@ Tiene implementado 2 content-type:
 
 - text/plain = retorna un template con un nacido por su indice
 - application/json = retorna un nacido por su indice en formato JSON
+
+Respuesta:
 
 ```
 {
@@ -641,7 +651,7 @@ Validaciones:
 3. Peso debe estar entre 0.1 y 10 kg.
 4. Todos los campos son requeridos.
 
-Respuesta
+Respuesta:
 ```
 {
     "message": "Actualización exitosa", 
@@ -674,7 +684,7 @@ Respuesta
 
 Elimina un nacido según su indice.
 
-Respuesta
+Respuesta:
 ```
 {
     "message": "Nacido eliminado correctamente",
@@ -802,6 +812,8 @@ Validacion:
 - text/plain devuelve una plantilla con los datos ordenados
 - application/json devuelve:
 
+Respuesta:
+
 ```
 {
     "data": {
@@ -891,6 +903,8 @@ Validacion:
 
 - text/plain devuelve una plantilla con los datos ordenados
 - application/json devuelve:
+
+Respuesta:
 
 ```
 {
