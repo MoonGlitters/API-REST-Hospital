@@ -1,0 +1,17 @@
+{% if id %}
+<h1>Indice Recien nacido: {{id}}</h1>
+{% else %}
+<h1>Listado de Recien nacidos</h1>
+{% endif %}
+
+{% for nacido in nacidos %}
+    <p>Nombre madre: {{nacido.parto.madre.nombre_completo}}</p>
+    <p>Edad madre: {{nacido.parto.madre.edad}}</p>
+    <p>Run madre: {{nacido.parto.madre.run}}</p>
+    <p>Fecha de nacimiento: {{nacido.parto.fecha_nacimiento}}</p>
+    <p>Tipo de parto: {{nacido.parto.tipo_parto}}</p>
+    <p>Nombre completo: {{nacido.nombre_completo}}</p>
+    <p>Peso: {{nacido.peso}}</p>
+    <p>Sexo: {{nacido.sexo}}</p>
+    <hr>
+{% endfor %}

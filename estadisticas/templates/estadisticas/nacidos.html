@@ -1,0 +1,25 @@
+<h1>Nacidos en un rango de fechas</h1>
+<h2>Cantidad de Nacidos: {{contador}}</h2>
+<h2>Rango de fechas: {{inicio}} | {{termino}} </h2>
+
+
+<h2>Femeninos: {{contador_fem}}</h2>
+{% for nacido in femeninos %}
+    <p>Fecha nacimiento: {{nacido.parto.fecha_nacimiento}}</p>
+    <p>Nombre completo: {{nacido.nombre_completo}}</p>
+    <p>Sexo: {{nacido.sexo}}</p>
+    <p>Peso: {{nacido.peso}}</p>
+    <p>Nombre madre: {{nacido.parto.madre.nombre_completo}}</p>
+    <hr>
+{% endfor %}
+
+<h2>Masculinos: {{contador_masc}}</h2>
+
+{% for nacido in masculinos %}
+    <p>Fecha nacimiento: {{nacido.parto.fecha_nacimiento}}</p>
+    <p>Nombre completo: {{nacido.nombre_completo}}</p>
+    <p>Sexo: {{nacido.sexo}}</p>
+    <p>Peso: {{nacido.peso}}</p>
+    <p>Nombre madre: {{nacido.parto.madre.nombre_completo}}</p>
+    <hr>
+{% endfor %}

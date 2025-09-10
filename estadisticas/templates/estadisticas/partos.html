@@ -1,0 +1,17 @@
+<h1>Partos realizados en un rango de fechas</h1>
+<h2>Cantidad de Partos: {{contador}}</h2>
+<h3>Rango de fechas: {{inicio}} | {{termino}} </h3>
+
+{% for parto in partos %}
+    <p>Nombre Doctor: {{parto.doctor.nombre_completo}}</p>
+    <p>Especialidad: {{parto.doctor.especialidad}}</p>
+    <p>Nombre madre: {{parto.madre.nombre_completo}}</p>
+    <p>Edad madre: {{parto.madre.edad}}</p>
+    <p>Run madre: {{parto.madre.run}}</p>
+    <p>Fecha ingreso parto: {{parto.fecha_ingreso}}</p>
+    <p>Fecha de nacimiento: {{parto.fecha_nacimiento}}</p>
+    <p>Fecha termino parto: {{parto.fecha_termino}}</p>
+    <p>Observaciones: {{parto.observaciones}}</p>
+    <p>Tipo de parto: {{parto.tipo_parto}}</p>
+    <hr>
+{% endfor %}

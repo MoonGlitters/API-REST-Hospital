@@ -1,0 +1,12 @@
+{% if id %}
+<h1>Indice Madre: {{id}}</h1>
+{% else %}
+<h1>Listado de Madres</h1>
+{% endif %}
+
+{% for madre in madres %}
+        <p>Nombre: {{madre.nombre_completo}}</p>
+        <p>Edad: {{madre.edad}}</p>
+        <p>Run: {{madre.run}}</p>
+        <hr>
+{% endfor %}

@@ -1,0 +1,48 @@
+<h1> Madres atendidas en un periodo ordenadas por edad</h1>
+<h1>Rango de fechas: {{inicio}} | {{termino}} </h1>
+<h2>Cantidad de madres: {{contador}}</h2>
+
+<h2>Madres menores de 20: {{contador_20}}</h2>
+{% if not madres20 %}
+    <p>No hay registros</p>
+{% else %}
+    {% for madre in madres20 %}
+        <p>Nombre: {{madre.nombre_completo}}</p>
+        <p>Edad: {{madre.edad}}</p>
+        <p>Run: {{madre.run}}</p>
+        <hr>
+    {% endfor %}
+{% endif %}
+<h2>Madres de 20 a 30: {{contador_2030}} </h2>
+{% if not madres2030 %}
+    <p>No hay registros</p>
+{% else %}
+    {% for madre in madres2030 %}
+        <p>Nombre: {{madre.nombre_completo}}</p>
+        <p>Edad: {{madre.edad}}</p>
+        <p>Run: {{madre.run}}</p>
+        <hr>
+    {% endfor %}
+{% endif %}
+<h2>Madres de 30 a 40: {{contador_3040}}</h2>
+{% if not madres3040 %}
+    <p>No hay registros</p>
+{% else %}
+    {% for madre in madres3040 %}
+        <p>Nombre: {{madre.nombre_completo}}</p>
+        <p>Edad: {{madre.edad}}</p>
+        <p>Run: {{madre.run}}</p>
+        <hr>
+    {% endfor %}
+{% endif %}
+<h2>Madres mayores de 40: {{contador_40}}</h2>
+{% if not madres40 %}
+    <p>No hay registros</p>
+{% else %}
+    {% for madre in madres40 %}
+        <p>Nombre: {{madre.nombre_completo}}</p>
+        <p>Edad: {{madre.edad}}</p>
+        <p>Run: {{madre.run}}</p>
+        <hr>
+    {% endfor %}
+{% endif %}

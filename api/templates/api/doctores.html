@@ -1,0 +1,13 @@
+{% if id %}
+<h1>Indice Doctor: {{id}}</h1>
+{% else %}
+<h1>Listado de Doctores</h1>
+{% endif %}
+
+{% for doctor in doctores %}
+        <p>Nombre: {{doctor.nombre_completo}}</p>
+        <p>Edad: {{doctor.edad}}</p>
+        <p>Run: {{doctor.run}}</p>
+        <p>Especialidad: {{doctor.especialidad}}</p>
+        <hr>
+{% endfor %}
