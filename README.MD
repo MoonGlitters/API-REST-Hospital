@@ -2,6 +2,22 @@
 
 - Se usa @csrf_exempt para permitir pruebas sin token CSRF
 - La API no usa base de datos, sino listas en memoria
+- La API se basa en indices, no contiene ID
+- Contiene un logger que registra las acciones en debug.log
+
+## Instalacion
+
+- Es necesario instalar DJANGO usando pip para su uso.
+
+```
+pip install Django
+python -m pip install Django
+```
+- Para iniciar la aplicacion se usa el comando.
+
+```
+python manage.py runserver
+```
 
 ## Aplicacion 1: /api
 
