@@ -1,2 +1,918 @@
 
 
+INFO 2025-09-10 11:37:16,661 autoreload Watching for file changes with StatReloader
+INFO 2025-09-10 11:37:19,206 basehttp "GET /api/partos/ HTTP/1.1" 200 1540
+INFO 2025-09-10 11:37:50,286 basehttp "GET /api/partos/ HTTP/1.1" 200 1411
+INFO 2025-09-10 11:38:08,198 basehttp "GET /api/nacidos/ HTTP/1.1" 200 1738
+WARNING 2025-09-10 11:41:37,441 log Bad Request: /api/partos/
+WARNING 2025-09-10 11:41:37,441 basehttp "POST /api/partos/ HTTP/1.1" 400 52
+INFO 2025-09-10 11:41:44,172 basehttp "POST /api/partos/ HTTP/1.1" 201 468
+INFO 2025-09-10 11:42:13,546 basehttp "GET /api/doctores/ HTTP/1.1" 200 495
+WARNING 2025-09-10 11:43:59,237 log Bad Request: /api/doctores/0
+WARNING 2025-09-10 11:43:59,237 basehttp "PUT /api/doctores/0 HTTP/1.1" 400 54
+INFO 2025-09-10 11:44:05,078 basehttp "PUT /api/doctores/0 HTTP/1.1" 200 153
+INFO 2025-09-10 11:44:12,683 basehttp "GET /api/doctores/0 HTTP/1.1" 200 103
+INFO 2025-09-10 11:44:24,548 basehttp "GET /api/partos/ HTTP/1.1" 200 41
+INFO 2025-09-10 11:44:34,342 basehttp "GET /api/partos/ HTTP/1.1" 200 41
+INFO 2025-09-10 11:44:41,206 basehttp "GET /api/partos/ HTTP/1.1" 200 1835
+INFO 2025-09-10 11:45:24,934 basehttp "GET /api/doctores/ HTTP/1.1" 200 335
+INFO 2025-09-10 11:45:56,695 basehttp "DELETE /api/doctores/0 HTTP/1.1" 200 144
+INFO 2025-09-10 11:46:05,282 basehttp "GET /api/doctores/0 HTTP/1.1" 200 116
+INFO 2025-09-10 11:48:18,720 basehttp "GET /estadisticas/madres?inicio=2023-02-23&termino=2025-09-08 HTTP/1.1" 200 662
+INFO 2025-09-10 11:48:46,814 basehttp "GET /estadisticas/madres?inicio=2023-02-23&termino=2025-09-08 HTTP/1.1" 200 847
+INFO 2025-09-10 11:49:16,661 basehttp "GET /estadisticas/nacidos?inicio=2023-02-23&termino=2025-09-08 HTTP/1.1" 200 855
+INFO 2025-09-10 11:49:32,605 basehttp "GET /estadisticas/partos?inicio=2023-02-23&termino=2025-09-08 HTTP/1.1" 200 2097
+INFO 2025-09-11 16:53:59,963 basehttp - Broken pipe from ('127.0.0.1', 3991)
+INFO 2025-10-02 14:23:42,352 autoreload Watching for file changes with StatReloader
+WARNING 2025-10-02 14:23:46,078 log Not Found: /
+WARNING 2025-10-02 14:23:46,079 basehttp "GET / HTTP/1.1" 404 2462
+WARNING 2025-10-02 14:23:46,493 log Not Found: /favicon.ico
+WARNING 2025-10-02 14:23:46,494 basehttp "GET /favicon.ico HTTP/1.1" 404 2513
+INFO 2025-10-02 14:23:53,260 basehttp "GET /api/doctores/ HTTP/1.1" 200 32
+INFO 2025-10-02 14:24:01,210 basehttp "GET /api/doctores/ HTTP/1.1" 200 32
+WARNING 2025-10-02 14:24:04,620 log Not Found: /api/
+WARNING 2025-10-02 14:24:04,620 basehttp "GET /api/ HTTP/1.1" 404 4497
+ERROR 2025-10-02 14:28:18,255 log Internal Server Error: /api/doctores
+Traceback (most recent call last):
+  File "C:\Users\alexa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\alexa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\utils\deprecation.py", line 122, in __call__
+    response = self.process_response(request, response)
+  File "C:\Users\alexa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\middleware\common.py", line 108, in process_response
+    return self.response_redirect_class(self.get_full_path_with_slash(request))
+                                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\alexa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\middleware\common.py", line 87, in get_full_path_with_slash
+    raise RuntimeError(
+    ...<9 lines>...
+    )
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to localhost:8000/api/doctores/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+ERROR 2025-10-02 14:28:18,258 basehttp "POST /api/doctores HTTP/1.1" 500 73882
+WARNING 2025-10-02 14:28:30,229 log Bad Request: /api/doctores/
+WARNING 2025-10-02 14:28:30,230 basehttp "POST /api/doctores/ HTTP/1.1" 400 41
+INFO 2025-10-02 14:28:37,423 basehttp "POST /api/doctores/ HTTP/1.1" 201 161
+INFO 2025-10-02 14:29:34,805 basehttp "GET /api/doctores/ HTTP/1.1" 200 41
+INFO 2025-10-02 14:30:03,210 basehttp "GET /api/doctores/ HTTP/1.1" 200 115
+INFO 2025-10-02 14:30:43,315 basehttp "GET /api/doctores/ HTTP/1.1" 200 179
+INFO 2025-10-02 14:31:03,275 basehttp "GET /api/doctores/1 HTTP/1.1" 200 176
+WARNING 2025-10-02 14:32:06,233 log Bad Request: /api/doctores/1
+WARNING 2025-10-02 14:32:06,234 basehttp "PUT /api/doctores/1 HTTP/1.1" 400 31
+INFO 2025-10-02 14:32:23,651 basehttp "PUT /api/doctores/1 HTTP/1.1" 200 168
+INFO 2025-10-02 14:32:37,217 basehttp "GET /api/doctores/1 HTTP/1.1" 200 176
+INFO 2025-10-02 14:33:48,041 basehttp "DELETE /api/doctores/1 HTTP/1.1" 200 31
+WARNING 2025-10-02 14:38:36,688 log Not Found: /api/doctores/1
+WARNING 2025-10-02 14:38:36,690 basehttp "GET /api/doctores/1 HTTP/1.1" 404 33
+INFO 2025-10-02 14:38:41,801 basehttp "GET /api/doctores/ HTTP/1.1" 200 41
+INFO 2025-10-02 14:38:51,642 basehttp "GET /api/doctores/ HTTP/1.1" 200 32
+INFO 2025-10-02 14:38:56,846 basehttp "POST /api/doctores/ HTTP/1.1" 201 161
+INFO 2025-10-02 14:40:02,184 basehttp "POST /api/doctores/ HTTP/1.1" 201 159
+WARNING 2025-10-02 14:50:59,401 log Conflict: /api/doctores/
+WARNING 2025-10-02 14:50:59,402 basehttp "POST /api/doctores/ HTTP/1.1" 409 26
+INFO 2025-10-02 14:52:40,560 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\api\views.py changed, reloading.
+INFO 2025-10-02 14:52:41,704 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 14:52:46,161 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\api\views.py changed, reloading.
+INFO 2025-10-02 14:52:47,345 autoreload Watching for file changes with StatReloader
+WARNING 2025-10-02 14:53:01,417 log Not Found: /api/doctores/5
+WARNING 2025-10-02 14:53:01,418 basehttp "DELETE /api/doctores/5 HTTP/1.1" 404 33
+ERROR 2025-10-02 14:53:07,948 log Internal Server Error: /api/doctores/3
+Traceback (most recent call last):
+  File "C:\Users\alexa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\alexa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\alexa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\api\views.py", line 142, in indexDoctores_id
+    return JsonResponse({'message':'Doctor eliminado', "data":doctor}, status=200)
+  File "C:\Users\alexa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\http\response.py", line 751, in __init__
+    data = json.dumps(data, cls=encoder, **json_dumps_params)
+  File "C:\Users\alexa\AppData\Local\Programs\Python\Python313\Lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ~~~~~~^^^^^
+  File "C:\Users\alexa\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 200, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\alexa\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 261, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\alexa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\serializers\json.py", line 114, in default
+    return super().default(o)
+           ~~~~~~~~~~~~~~~^^^
+  File "C:\Users\alexa\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+                    f'is not JSON serializable')
+TypeError: Object of type Doctor is not JSON serializable
+ERROR 2025-10-02 14:53:07,956 basehttp "DELETE /api/doctores/3 HTTP/1.1" 500 99338
+INFO 2025-10-02 14:53:28,186 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\api\views.py changed, reloading.
+INFO 2025-10-02 14:53:29,320 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 14:53:30,679 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\api\views.py changed, reloading.
+INFO 2025-10-02 14:53:31,701 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 14:53:32,974 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\api\views.py changed, reloading.
+INFO 2025-10-02 14:53:33,955 autoreload Watching for file changes with StatReloader
+WARNING 2025-10-02 14:53:39,613 log Not Found: /api/doctores/3
+WARNING 2025-10-02 14:53:39,615 basehttp "DELETE /api/doctores/3 HTTP/1.1" 404 33
+INFO 2025-10-02 14:53:46,361 basehttp "DELETE /api/doctores/2 HTTP/1.1" 200 157
+INFO 2025-10-02 14:54:17,493 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\api\views.py changed, reloading.
+INFO 2025-10-02 14:54:18,740 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 14:54:20,078 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\api\views.py changed, reloading.
+INFO 2025-10-02 14:54:21,067 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 14:54:34,098 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\api\views.py changed, reloading.
+INFO 2025-10-02 14:54:35,198 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 14:54:38,822 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\api\views.py changed, reloading.
+INFO 2025-10-02 14:54:39,998 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 14:54:42,316 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\api\views.py changed, reloading.
+INFO 2025-10-02 14:54:43,481 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 14:54:46,042 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\api\views.py changed, reloading.
+INFO 2025-10-02 14:54:47,129 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 14:54:53,875 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\api\views.py changed, reloading.
+INFO 2025-10-02 14:54:54,824 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 14:56:22,406 basehttp "GET /api/doctores/ HTTP/1.1" 200 41
+INFO 2025-10-02 14:56:27,801 basehttp "GET /api/doctores/ HTTP/1.1" 200 32
+INFO 2025-10-02 14:56:41,385 basehttp "POST /api/doctores/ HTTP/1.1" 201 154
+INFO 2025-10-02 14:57:23,452 basehttp "DELETE /api/doctores/4 HTTP/1.1" 200 150
+INFO 2025-10-02 14:57:48,645 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\api\views.py changed, reloading.
+INFO 2025-10-02 14:57:49,805 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 14:57:52,359 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\api\views.py changed, reloading.
+INFO 2025-10-02 14:57:53,296 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 14:57:58,654 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\api\views.py changed, reloading.
+INFO 2025-10-02 14:57:59,672 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 14:58:03,330 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\api\views.py changed, reloading.
+INFO 2025-10-02 14:58:04,238 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 14:58:08,858 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\api\views.py changed, reloading.
+INFO 2025-10-02 14:58:09,799 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 14:58:13,125 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\api\views.py changed, reloading.
+INFO 2025-10-02 14:58:14,148 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 14:58:25,510 basehttp "POST /api/doctores/ HTTP/1.1" 201 159
+WARNING 2025-10-02 14:58:33,776 log Not Found: /api/doctores/4
+WARNING 2025-10-02 14:58:33,777 basehttp "DELETE /api/doctores/4 HTTP/1.1" 404 33
+INFO 2025-10-02 14:58:39,349 basehttp "DELETE /api/doctores/5 HTTP/1.1" 200 91
+INFO 2025-10-02 14:58:50,616 basehttp "POST /api/doctores/ HTTP/1.1" 201 159
+INFO 2025-10-02 15:00:07,083 basehttp "POST /api/doctores/ HTTP/1.1" 201 158
+INFO 2025-10-02 15:00:41,416 basehttp "POST /api/doctores/ HTTP/1.1" 201 159
+WARNING 2025-10-02 15:00:48,197 log Bad Request: /api/doctores/
+WARNING 2025-10-02 15:00:48,198 basehttp "POST /api/doctores/ HTTP/1.1" 400 31
+INFO 2025-10-02 15:05:34,648 basehttp "GET /api/madres/ HTTP/1.1" 200 30
+WARNING 2025-10-02 15:19:09,371 log Not Found: /api/madres/1
+WARNING 2025-10-02 15:19:09,372 basehttp "GET /api/madres/1 HTTP/1.1" 404 32
+WARNING 2025-10-02 15:20:55,991 log Bad Request: /api/madres/
+WARNING 2025-10-02 15:20:55,993 basehttp "POST /api/madres/ HTTP/1.1" 400 42
+INFO 2025-10-02 15:21:07,328 basehttp "POST /api/madres/ HTTP/1.1" 201 130
+INFO 2025-10-02 16:23:48,606 basehttp "GET /api/madres/1 HTTP/1.1" 200 41
+INFO 2025-10-02 16:24:01,533 basehttp "GET /api/madres/1 HTTP/1.1" 200 41
+INFO 2025-10-02 16:25:13,443 basehttp "GET /api/madres/1 HTTP/1.1" 200 41
+INFO 2025-10-02 16:26:13,753 basehttp "GET /api/madres/1 HTTP/1.1" 200 82
+INFO 2025-10-02 16:26:24,574 basehttp "GET /api/madres/ HTTP/1.1" 200 84
+INFO 2025-10-02 16:26:36,872 basehttp "GET /api/madres/ HTTP/1.1" 200 41
+INFO 2025-10-02 16:26:51,669 basehttp "GET /api/madres/ HTTP/1.1" 200 136
+WARNING 2025-10-02 16:27:53,016 log Bad Request: /api/madres/1
+WARNING 2025-10-02 16:27:53,017 basehttp "PUT /api/madres/1 HTTP/1.1" 400 31
+WARNING 2025-10-02 16:28:31,446 log Bad Request: /api/madres/1
+WARNING 2025-10-02 16:28:31,446 basehttp "PUT /api/madres/1 HTTP/1.1" 400 31
+INFO 2025-10-02 16:29:08,810 basehttp "PUT /api/madres/1 HTTP/1.1" 200 137
+INFO 2025-10-02 16:29:17,674 basehttp "GET /api/madres/1 HTTP/1.1" 200 138
+INFO 2025-10-02 16:32:12,648 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\api\views.py changed, reloading.
+INFO 2025-10-02 16:32:14,395 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 16:32:18,764 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\api\views.py changed, reloading.
+INFO 2025-10-02 16:32:19,413 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 16:32:22,733 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\api\views.py changed, reloading.
+INFO 2025-10-02 16:32:23,354 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 16:32:25,662 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\api\views.py changed, reloading.
+INFO 2025-10-02 16:32:26,373 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 16:32:29,713 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\api\views.py changed, reloading.
+INFO 2025-10-02 16:32:30,404 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 16:32:31,727 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\api\views.py changed, reloading.
+INFO 2025-10-02 16:32:32,445 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 16:32:34,754 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\api\views.py changed, reloading.
+INFO 2025-10-02 16:32:35,495 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 16:33:01,285 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\api\views.py changed, reloading.
+INFO 2025-10-02 16:33:01,985 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 16:33:06,207 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\api\views.py changed, reloading.
+INFO 2025-10-02 16:33:06,884 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 16:33:10,077 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\api\views.py changed, reloading.
+INFO 2025-10-02 16:33:10,785 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 16:33:11,960 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\api\views.py changed, reloading.
+INFO 2025-10-02 16:33:12,800 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 16:33:13,974 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\api\views.py changed, reloading.
+INFO 2025-10-02 16:33:14,627 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 16:33:19,856 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\api\views.py changed, reloading.
+INFO 2025-10-02 16:33:20,539 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 16:33:24,660 basehttp "DELETE /api/madres/1 HTTP/1.1" 200 105
+WARNING 2025-10-02 16:35:07,976 log Not Found: /api/madres/1
+WARNING 2025-10-02 16:35:07,977 basehttp "POST /api/madres/1 HTTP/1.1" 404 32
+WARNING 2025-10-02 16:35:17,419 log Bad Request: /api/madres/
+WARNING 2025-10-02 16:35:17,420 basehttp "POST /api/madres/ HTTP/1.1" 400 41
+INFO 2025-10-02 16:35:26,301 basehttp "POST /api/madres/ HTTP/1.1" 201 129
+INFO 2025-10-02 16:35:57,658 basehttp "POST /api/madres/ HTTP/1.1" 201 129
+INFO 2025-10-02 16:36:19,623 basehttp "POST /api/madres/ HTTP/1.1" 201 127
+INFO 2025-10-02 16:36:36,613 basehttp "GET /api/partos/ HTTP/1.1" 200 41
+INFO 2025-10-02 16:36:41,896 basehttp "GET /api/partos/ HTTP/1.1" 200 30
+WARNING 2025-10-02 16:41:29,160 log Bad Request: /api/partos/
+WARNING 2025-10-02 16:41:29,160 basehttp "POST /api/partos/ HTTP/1.1" 400 31
+INFO 2025-10-02 16:42:56,822 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\api\views.py changed, reloading.
+INFO 2025-10-02 16:42:57,651 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 16:42:58,833 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\api\views.py changed, reloading.
+INFO 2025-10-02 16:42:59,543 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 16:43:00,842 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\api\views.py changed, reloading.
+INFO 2025-10-02 16:43:01,515 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 16:43:35,457 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\api\views.py changed, reloading.
+INFO 2025-10-02 16:43:36,092 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 16:43:46,590 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\api\views.py changed, reloading.
+INFO 2025-10-02 16:43:47,509 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 16:43:49,867 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\api\views.py changed, reloading.
+INFO 2025-10-02 16:43:50,605 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 16:44:05,250 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\api\views.py changed, reloading.
+INFO 2025-10-02 16:44:05,937 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 16:44:09,342 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\api\views.py changed, reloading.
+INFO 2025-10-02 16:44:09,995 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 16:44:11,312 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\api\views.py changed, reloading.
+INFO 2025-10-02 16:44:12,000 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 16:44:18,413 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\api\views.py changed, reloading.
+INFO 2025-10-02 16:44:19,211 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 16:44:28,671 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\api\views.py changed, reloading.
+INFO 2025-10-02 16:44:29,571 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 16:44:30,906 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\api\views.py changed, reloading.
+INFO 2025-10-02 16:44:31,660 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 16:44:37,056 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\api\views.py changed, reloading.
+INFO 2025-10-02 16:44:37,829 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 16:44:58,543 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\api\views.py changed, reloading.
+INFO 2025-10-02 16:44:59,194 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 16:45:08,655 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\api\views.py changed, reloading.
+INFO 2025-10-02 16:45:09,347 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 16:45:11,688 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\api\views.py changed, reloading.
+INFO 2025-10-02 16:45:12,465 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 16:45:13,793 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\api\views.py changed, reloading.
+INFO 2025-10-02 16:45:14,512 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 16:45:18,896 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\api\views.py changed, reloading.
+INFO 2025-10-02 16:45:19,632 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 16:45:20,918 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\api\views.py changed, reloading.
+INFO 2025-10-02 16:45:21,596 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 16:45:24,946 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\api\views.py changed, reloading.
+INFO 2025-10-02 16:45:25,644 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 16:45:27,010 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\api\views.py changed, reloading.
+INFO 2025-10-02 16:45:27,711 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 16:45:43,316 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\api\views.py changed, reloading.
+INFO 2025-10-02 16:45:44,011 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 16:45:49,404 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\api\views.py changed, reloading.
+INFO 2025-10-02 16:45:50,186 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 16:46:01,762 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\api\views.py changed, reloading.
+INFO 2025-10-02 16:46:02,540 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 16:46:06,998 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\api\views.py changed, reloading.
+INFO 2025-10-02 16:46:07,738 autoreload Watching for file changes with StatReloader
+WARNING 2025-10-02 16:46:26,292 log Not Found: /api/partos/
+WARNING 2025-10-02 16:46:26,293 basehttp "POST /api/partos/ HTTP/1.1" 404 33
+WARNING 2025-10-02 16:46:31,585 log Not Found: /api/partos/
+WARNING 2025-10-02 16:46:31,586 basehttp "POST /api/partos/ HTTP/1.1" 404 32
+WARNING 2025-10-02 16:46:36,638 log Bad Request: /api/partos/
+WARNING 2025-10-02 16:46:36,638 basehttp "POST /api/partos/ HTTP/1.1" 400 68
+WARNING 2025-10-02 16:46:53,340 log Bad Request: /api/partos/
+WARNING 2025-10-02 16:46:53,341 basehttp "POST /api/partos/ HTTP/1.1" 400 68
+WARNING 2025-10-02 16:47:23,198 log Bad Request: /api/partos/
+WARNING 2025-10-02 16:47:23,198 basehttp "POST /api/partos/ HTTP/1.1" 400 59
+WARNING 2025-10-02 16:47:47,160 log Bad Request: /api/partos/
+WARNING 2025-10-02 16:47:47,160 basehttp "POST /api/partos/ HTTP/1.1" 400 40
+INFO 2025-10-02 16:47:56,072 basehttp "POST /api/partos/ HTTP/1.1" 201 461
+INFO 2025-10-02 16:48:35,122 basehttp "GET /api/partos/ HTTP/1.1" 200 486
+INFO 2025-10-02 16:49:20,508 basehttp "GET /api/partos/1 HTTP/1.1" 200 484
+ERROR 2025-10-02 16:54:11,521 log Internal Server Error: /api/partos/1
+Traceback (most recent call last):
+  File "C:\Users\alexa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\alexa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\alexa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\api\views.py", line 365, in indexPartos_id
+    doctor = Doctor.objects.get(id=datos['doctor_id'])
+                                   ~~~~~^^^^^^^^^^^^^
+KeyError: 'doctor_id'
+ERROR 2025-10-02 16:54:11,524 basehttp "PUT /api/partos/1 HTTP/1.1" 500 72990
+INFO 2025-10-02 16:54:52,540 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\api\views.py changed, reloading.
+INFO 2025-10-02 16:54:53,263 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 16:54:57,646 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\api\views.py changed, reloading.
+INFO 2025-10-02 16:54:58,334 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 16:55:09,873 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\api\views.py changed, reloading.
+INFO 2025-10-02 16:55:10,546 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 16:55:39,428 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\api\views.py changed, reloading.
+INFO 2025-10-02 16:55:40,240 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 16:55:44,702 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\api\views.py changed, reloading.
+INFO 2025-10-02 16:55:45,613 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 16:55:47,979 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\api\views.py changed, reloading.
+INFO 2025-10-02 16:55:48,670 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 16:56:05,278 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\api\views.py changed, reloading.
+INFO 2025-10-02 16:56:06,011 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 16:56:10,227 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\api\views.py changed, reloading.
+INFO 2025-10-02 16:56:10,996 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 16:56:16,352 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\api\views.py changed, reloading.
+INFO 2025-10-02 16:56:17,191 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 16:56:21,442 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\api\views.py changed, reloading.
+INFO 2025-10-02 16:56:22,091 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 16:56:25,414 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\api\views.py changed, reloading.
+INFO 2025-10-02 16:56:26,094 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 16:56:28,406 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\api\views.py changed, reloading.
+INFO 2025-10-02 16:56:29,147 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 16:56:31,485 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\api\views.py changed, reloading.
+INFO 2025-10-02 16:56:32,347 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 16:56:52,116 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\api\views.py changed, reloading.
+INFO 2025-10-02 16:56:52,900 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 16:56:54,100 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\api\views.py changed, reloading.
+INFO 2025-10-02 16:56:54,861 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 16:56:59,280 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\api\views.py changed, reloading.
+INFO 2025-10-02 16:57:00,062 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 16:57:01,230 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\api\views.py changed, reloading.
+INFO 2025-10-02 16:57:01,933 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 16:57:12,246 basehttp "PUT /api/partos/1 HTTP/1.1" 200 471
+WARNING 2025-10-02 16:57:41,304 log Not Found: /api/partos/1
+WARNING 2025-10-02 16:57:41,304 basehttp "PUT /api/partos/1 HTTP/1.1" 404 33
+INFO 2025-10-02 16:57:59,437 basehttp "GET /api/partos/1 HTTP/1.1" 200 481
+INFO 2025-10-02 16:58:14,700 basehttp "DELETE /api/partos/1 HTTP/1.1" 200 30
+WARNING 2025-10-02 16:58:26,943 log Not Found: /api/partos/1
+WARNING 2025-10-02 16:58:26,944 basehttp "GET /api/partos/1 HTTP/1.1" 404 32
+INFO 2025-10-02 16:58:44,649 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\api\views.py changed, reloading.
+INFO 2025-10-02 16:58:45,384 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 16:58:48,570 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\api\views.py changed, reloading.
+INFO 2025-10-02 16:58:49,184 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 16:58:52,563 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\api\views.py changed, reloading.
+INFO 2025-10-02 16:58:53,333 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 16:58:54,487 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\api\views.py changed, reloading.
+INFO 2025-10-02 16:58:55,300 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 16:58:56,623 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\api\views.py changed, reloading.
+INFO 2025-10-02 16:58:57,369 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 16:58:58,657 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\api\views.py changed, reloading.
+INFO 2025-10-02 16:58:59,284 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 16:59:04,640 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\api\views.py changed, reloading.
+INFO 2025-10-02 16:59:05,455 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 16:59:06,605 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\api\views.py changed, reloading.
+INFO 2025-10-02 16:59:07,250 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 16:59:08,550 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\api\views.py changed, reloading.
+INFO 2025-10-02 16:59:09,216 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 16:59:14,439 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\api\views.py changed, reloading.
+INFO 2025-10-02 16:59:15,143 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 16:59:19,364 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\api\views.py changed, reloading.
+INFO 2025-10-02 16:59:19,979 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 16:59:32,323 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\api\views.py changed, reloading.
+INFO 2025-10-02 16:59:33,049 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 16:59:38,320 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\api\views.py changed, reloading.
+INFO 2025-10-02 16:59:38,953 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 16:59:41,269 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\api\views.py changed, reloading.
+INFO 2025-10-02 16:59:42,145 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 16:59:45,368 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\api\views.py changed, reloading.
+INFO 2025-10-02 16:59:46,056 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 16:59:47,372 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\api\views.py changed, reloading.
+INFO 2025-10-02 16:59:48,198 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 16:59:49,391 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\api\views.py changed, reloading.
+INFO 2025-10-02 16:59:50,192 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 16:59:54,574 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\api\views.py changed, reloading.
+INFO 2025-10-02 16:59:55,251 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 17:00:40,394 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\api\views.py changed, reloading.
+INFO 2025-10-02 17:00:41,083 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 17:00:44,468 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\api\views.py changed, reloading.
+INFO 2025-10-02 17:00:45,167 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 17:01:15,059 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\api\views.py changed, reloading.
+INFO 2025-10-02 17:01:15,739 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 17:01:17,929 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\api\views.py changed, reloading.
+INFO 2025-10-02 17:01:18,627 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 17:02:34,752 basehttp "POST /api/partos/ HTTP/1.1" 201 461
+WARNING 2025-10-02 17:02:44,983 log Not Found: /api/partos/1
+WARNING 2025-10-02 17:02:44,984 basehttp "DELETE /api/partos/1 HTTP/1.1" 404 32
+ERROR 2025-10-02 17:02:51,421 log Internal Server Error: /api/partos/2
+Traceback (most recent call last):
+  File "C:\Users\alexa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\alexa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\alexa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\api\views.py", line 394, in indexPartos_id
+    return JsonResponse({'message':'Parto eliminado', "data": {"id":id, **parto}}, status=200)
+                                                              ^^^^^^^^^^^^^^^^^^
+TypeError: 'Parto' object is not a mapping
+ERROR 2025-10-02 17:02:51,423 basehttp "DELETE /api/partos/2 HTTP/1.1" 500 72836
+INFO 2025-10-02 17:03:19,604 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\api\views.py changed, reloading.
+INFO 2025-10-02 17:03:20,565 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 17:03:22,737 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\api\views.py changed, reloading.
+INFO 2025-10-02 17:03:23,523 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 17:03:26,749 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\api\views.py changed, reloading.
+INFO 2025-10-02 17:03:27,511 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 17:03:28,682 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\api\views.py changed, reloading.
+INFO 2025-10-02 17:03:29,515 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 17:03:31,708 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\api\views.py changed, reloading.
+INFO 2025-10-02 17:03:32,322 autoreload Watching for file changes with StatReloader
+WARNING 2025-10-02 17:03:40,110 log Not Found: /api/partos/2
+WARNING 2025-10-02 17:03:40,111 basehttp "DELETE /api/partos/2 HTTP/1.1" 404 32
+INFO 2025-10-02 17:03:55,481 basehttp "POST /api/partos/ HTTP/1.1" 201 461
+INFO 2025-10-02 17:04:01,157 basehttp "DELETE /api/partos/3 HTTP/1.1" 200 62
+INFO 2025-10-02 17:04:29,900 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\api\views.py changed, reloading.
+INFO 2025-10-02 17:04:30,656 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 17:04:31,836 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\api\views.py changed, reloading.
+INFO 2025-10-02 17:04:32,447 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 17:04:46,826 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\api\views.py changed, reloading.
+INFO 2025-10-02 17:04:47,516 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 17:04:57,851 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\api\views.py changed, reloading.
+INFO 2025-10-02 17:04:58,547 autoreload Watching for file changes with StatReloader
+WARNING 2025-10-02 17:05:23,854 log Not Found: /api/partos/3
+WARNING 2025-10-02 17:05:23,855 basehttp "POST /api/partos/3 HTTP/1.1" 404 32
+INFO 2025-10-02 17:05:32,850 basehttp "POST /api/partos/ HTTP/1.1" 201 461
+INFO 2025-10-02 17:06:02,454 basehttp "POST /api/partos/ HTTP/1.1" 201 459
+WARNING 2025-10-02 17:06:18,077 log Not Found: /api/partos/
+WARNING 2025-10-02 17:06:18,077 basehttp "POST /api/partos/ HTTP/1.1" 404 33
+WARNING 2025-10-02 17:06:25,528 log Not Found: /api/partos/
+WARNING 2025-10-02 17:06:25,529 basehttp "POST /api/partos/ HTTP/1.1" 404 32
+INFO 2025-10-02 17:06:29,711 basehttp "POST /api/partos/ HTTP/1.1" 201 461
+WARNING 2025-10-02 17:06:45,477 log Not Found: /api/madre/3
+WARNING 2025-10-02 17:06:45,479 basehttp "DELETE /api/madre/3 HTTP/1.1" 404 4521
+WARNING 2025-10-02 17:06:58,032 log Conflict: /api/madres/3
+WARNING 2025-10-02 17:06:58,032 basehttp "DELETE /api/madres/3 HTTP/1.1" 409 62
+WARNING 2025-10-02 17:07:25,219 log Not Found: /api/doctores/3
+WARNING 2025-10-02 17:07:25,220 basehttp "DELETE /api/doctores/3 HTTP/1.1" 404 33
+WARNING 2025-10-02 17:07:29,800 log Conflict: /api/doctores/6
+WARNING 2025-10-02 17:07:29,800 basehttp "DELETE /api/doctores/6 HTTP/1.1" 409 62
+WARNING 2025-10-02 17:14:40,941 log Not Found: /api/partos/1
+WARNING 2025-10-02 17:14:40,942 basehttp "GET /api/partos/1 HTTP/1.1" 404 32
+INFO 2025-10-02 17:14:46,489 basehttp "GET /api/partos/4 HTTP/1.1" 200 484
+INFO 2025-10-02 17:14:50,949 basehttp "GET /api/partos/ HTTP/1.1" 200 1396
+INFO 2025-10-02 17:25:54,555 basehttp "GET /api/nacidos/ HTTP/1.1" 200 38
+WARNING 2025-10-02 17:25:57,653 log Not Found: /api/nacidos/1
+WARNING 2025-10-02 17:25:57,653 basehttp "GET /api/nacidos/1 HTTP/1.1" 404 33
+INFO 2025-10-02 17:26:00,994 basehttp "GET /api/nacidos/ HTTP/1.1" 200 38
+WARNING 2025-10-02 17:27:28,494 log Bad Request: /api/nacidos/
+WARNING 2025-10-02 17:27:28,495 basehttp "POST /api/nacidos/ HTTP/1.1" 400 31
+INFO 2025-10-02 17:28:09,279 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\api\views.py changed, reloading.
+INFO 2025-10-02 17:28:10,121 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 17:28:14,530 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\api\views.py changed, reloading.
+INFO 2025-10-02 17:28:15,270 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 17:28:33,953 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\api\views.py changed, reloading.
+INFO 2025-10-02 17:28:34,892 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 17:28:44,433 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\api\views.py changed, reloading.
+INFO 2025-10-02 17:28:45,134 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 17:28:50,373 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\api\views.py changed, reloading.
+INFO 2025-10-02 17:28:51,065 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 17:29:08,749 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\api\views.py changed, reloading.
+INFO 2025-10-02 17:29:09,632 autoreload Watching for file changes with StatReloader
+WARNING 2025-10-02 17:29:41,418 log Not Found: /api/nacidos/
+WARNING 2025-10-02 17:29:41,418 basehttp "POST /api/nacidos/ HTTP/1.1" 404 32
+INFO 2025-10-02 17:29:47,935 basehttp "POST /api/nacidos/ HTTP/1.1" 201 569
+INFO 2025-10-02 17:33:04,977 basehttp "POST /api/nacidos/ HTTP/1.1" 201 567
+WARNING 2025-10-02 17:33:11,176 log Bad Request: /api/nacidos/
+WARNING 2025-10-02 17:33:11,176 basehttp "POST /api/nacidos/ HTTP/1.1" 400 44
+INFO 2025-10-02 17:33:56,825 basehttp "POST /api/nacidos/ HTTP/1.1" 201 572
+INFO 2025-10-02 17:34:08,518 basehttp "POST /api/nacidos/ HTTP/1.1" 201 563
+WARNING 2025-10-02 17:35:25,224 log Bad Request: /api/nacidos/4
+WARNING 2025-10-02 17:35:25,224 basehttp "PUT /api/nacidos/4 HTTP/1.1" 400 31
+WARNING 2025-10-02 17:35:31,269 log Bad Request: /api/nacidos/4
+WARNING 2025-10-02 17:35:31,269 basehttp "PUT /api/nacidos/4 HTTP/1.1" 400 31
+INFO 2025-10-02 17:35:45,503 basehttp "PUT /api/nacidos/4 HTTP/1.1" 200 572
+INFO 2025-10-02 17:35:52,494 basehttp "GET /api/nacidos/4 HTTP/1.1" 200 326
+INFO 2025-10-02 17:36:34,288 basehttp "DELETE /api/nacidos/4 HTTP/1.1" 200 31
+WARNING 2025-10-02 17:36:45,517 log Not Found: /api/nacidos/4
+WARNING 2025-10-02 17:36:45,518 basehttp "GET /api/nacidos/4 HTTP/1.1" 404 33
+INFO 2025-10-02 17:37:29,999 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\api\views.py changed, reloading.
+INFO 2025-10-02 17:37:30,796 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 17:37:33,099 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\api\views.py changed, reloading.
+INFO 2025-10-02 17:37:33,935 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 17:37:38,170 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\api\views.py changed, reloading.
+INFO 2025-10-02 17:37:39,125 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 17:37:41,544 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\api\views.py changed, reloading.
+INFO 2025-10-02 17:37:42,371 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 17:37:44,716 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\api\views.py changed, reloading.
+INFO 2025-10-02 17:37:45,515 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 17:37:48,905 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\api\views.py changed, reloading.
+INFO 2025-10-02 17:37:49,541 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 17:37:58,849 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\api\views.py changed, reloading.
+INFO 2025-10-02 17:37:59,648 autoreload Watching for file changes with StatReloader
+WARNING 2025-10-02 17:38:47,100 log Not Found: /api/estadisticas/madres
+WARNING 2025-10-02 17:38:47,101 basehttp "GET /api/estadisticas/madres HTTP/1.1" 404 4554
+INFO 2025-10-02 17:38:59,772 basehttp "GET /estadisticas/madres HTTP/1.1" 200 18
+ERROR 2025-10-02 17:39:22,067 log Internal Server Error: /estadisticas/madres
+Traceback (most recent call last):
+  File "C:\Users\alexa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\alexa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\estadisticas\views.py", line 26, in est_madres
+    madres_ordenadas = sorted([madre.indice_madre.toJSON() for madre in partos if fecha_inicio_iso <= madre.fecha_ingreso and fecha_termino_iso >= madre.fecha_ingreso ], key=lambda x: int(x["edad"]))
+                                                                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: can't compare offset-naive and offset-aware datetimes
+ERROR 2025-10-02 17:39:22,069 basehttp "GET /estadisticas/madres?inicio=2023-02-23&termino=2025-09-08 HTTP/1.1" 500 70929
+INFO 2025-10-02 17:40:21,014 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\estadisticas\views.py changed, reloading.
+INFO 2025-10-02 17:40:21,829 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 17:40:23,148 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\estadisticas\views.py changed, reloading.
+INFO 2025-10-02 17:40:23,874 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 17:40:26,194 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\estadisticas\views.py changed, reloading.
+INFO 2025-10-02 17:40:26,911 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 17:40:30,259 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\estadisticas\views.py changed, reloading.
+INFO 2025-10-02 17:40:30,938 autoreload Watching for file changes with StatReloader
+ERROR 2025-10-02 17:40:50,059 log Internal Server Error: /estadisticas/madres
+Traceback (most recent call last):
+  File "C:\Users\alexa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\alexa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\estadisticas\views.py", line 25, in est_madres
+    partos = Parto.objects.all().toJSON()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'QuerySet' object has no attribute 'toJSON'
+ERROR 2025-10-02 17:40:50,063 basehttp "GET /estadisticas/madres?inicio=2023-02-23&termino=2025-09-08 HTTP/1.1" 500 70387
+INFO 2025-10-02 17:41:00,966 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\estadisticas\views.py changed, reloading.
+INFO 2025-10-02 17:41:01,700 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 17:41:09,227 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\estadisticas\views.py changed, reloading.
+INFO 2025-10-02 17:41:09,997 autoreload Watching for file changes with StatReloader
+ERROR 2025-10-02 17:41:19,071 log Internal Server Error: /estadisticas/madres
+Traceback (most recent call last):
+  File "C:\Users\alexa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\alexa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\estadisticas\views.py", line 26, in est_madres
+    madres_ordenadas = sorted([madre.toJSON() for madre in partos if fecha_inicio_iso <= madre.fecha_ingreso and fecha_termino_iso >= madre.fecha_ingreso ], key=lambda x: int(x["edad"]))
+                                                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: can't compare offset-naive and offset-aware datetimes
+ERROR 2025-10-02 17:41:19,076 basehttp "GET /estadisticas/madres?inicio=2023-02-23&termino=2025-09-08 HTTP/1.1" 500 70877
+INFO 2025-10-02 17:43:00,624 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\estadisticas\views.py changed, reloading.
+INFO 2025-10-02 17:43:01,553 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 17:43:02,995 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\estadisticas\views.py changed, reloading.
+INFO 2025-10-02 17:43:03,970 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 17:43:05,293 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\estadisticas\views.py changed, reloading.
+INFO 2025-10-02 17:43:06,328 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 17:43:08,775 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\estadisticas\views.py changed, reloading.
+INFO 2025-10-02 17:43:09,582 autoreload Watching for file changes with StatReloader
+ERROR 2025-10-02 17:43:14,243 log Internal Server Error: /estadisticas/madres
+Traceback (most recent call last):
+  File "C:\Users\alexa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\alexa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\estadisticas\views.py", line 27, in est_madres
+    madres_ordenadas = sorted([madre.toJSON() for madre in partos if fecha_inicio_iso <= madre.fecha_ingreso and fecha_termino_iso >= madre.fecha_ingreso ], key=lambda x: int(x["edad"]))
+                                                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: can't compare offset-naive and offset-aware datetimes
+ERROR 2025-10-02 17:43:14,247 basehttp "GET /estadisticas/madres?inicio=2023-02-23&termino=2025-09-08 HTTP/1.1" 500 70849
+INFO 2025-10-02 17:43:33,428 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\estadisticas\views.py changed, reloading.
+INFO 2025-10-02 17:43:34,236 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 17:46:28,247 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\estadisticas\views.py changed, reloading.
+INFO 2025-10-02 17:46:29,178 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 17:46:33,669 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\estadisticas\views.py changed, reloading.
+INFO 2025-10-02 17:46:34,519 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 17:46:37,749 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\estadisticas\views.py changed, reloading.
+INFO 2025-10-02 17:46:38,487 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 17:46:39,684 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\estadisticas\views.py changed, reloading.
+INFO 2025-10-02 17:46:40,529 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 17:46:41,717 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\estadisticas\views.py changed, reloading.
+INFO 2025-10-02 17:46:42,459 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 17:46:46,687 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\estadisticas\views.py changed, reloading.
+INFO 2025-10-02 17:46:47,484 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 17:46:53,949 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\estadisticas\views.py changed, reloading.
+INFO 2025-10-02 17:46:54,728 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 17:47:07,277 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\estadisticas\views.py changed, reloading.
+INFO 2025-10-02 17:47:08,030 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 17:47:14,458 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\estadisticas\views.py changed, reloading.
+INFO 2025-10-02 17:47:15,171 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 17:47:16,513 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\estadisticas\views.py changed, reloading.
+INFO 2025-10-02 17:47:17,319 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 17:47:21,558 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\estadisticas\views.py changed, reloading.
+INFO 2025-10-02 17:47:22,292 autoreload Watching for file changes with StatReloader
+ERROR 2025-10-02 17:47:22,964 log Internal Server Error: /estadisticas/madres
+Traceback (most recent call last):
+  File "C:\Users\alexa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\alexa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\estadisticas\views.py", line 27, in est_madres
+    madres_ordenadas = sorted([madre.toJSON() for madre in partos if fecha_inicio_iso <= madre.fecha_ingreso and fecha_termino_iso >= madre.fecha_ingreso ], key=lambda x: int(x["edad"]))
+  File "C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\estadisticas\views.py", line 27, in <lambda>
+    madres_ordenadas = sorted([madre.toJSON() for madre in partos if fecha_inicio_iso <= madre.fecha_ingreso and fecha_termino_iso >= madre.fecha_ingreso ], key=lambda x: int(x["edad"]))
+                                                                                                                                                                               ~^^^^^^^^
+KeyError: 'edad'
+ERROR 2025-10-02 17:47:22,966 basehttp "GET /estadisticas/madres?inicio=2023-02-23&termino=2025-09-08 HTTP/1.1" 500 76579
+INFO 2025-10-02 17:47:58,340 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\estadisticas\views.py changed, reloading.
+INFO 2025-10-02 17:47:59,068 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 17:48:00,242 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\estadisticas\views.py changed, reloading.
+INFO 2025-10-02 17:48:01,125 autoreload Watching for file changes with StatReloader
+ERROR 2025-10-02 17:48:13,514 log Internal Server Error: /estadisticas/madres
+Traceback (most recent call last):
+  File "C:\Users\alexa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\alexa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\estadisticas\views.py", line 27, in est_madres
+    madres_ordenadas = sorted([madre.toJSON() for madre in partos if fecha_inicio_iso <= madre.fecha_ingreso and fecha_termino_iso >= madre.fecha_ingreso ])
+TypeError: '<' not supported between instances of 'dict' and 'dict'
+ERROR 2025-10-02 17:48:13,517 basehttp "GET /estadisticas/madres?inicio=2023-02-23&termino=2025-09-08 HTTP/1.1" 500 71153
+INFO 2025-10-02 17:48:42,549 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\estadisticas\views.py changed, reloading.
+INFO 2025-10-02 17:48:43,415 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 17:48:44,746 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\estadisticas\views.py changed, reloading.
+INFO 2025-10-02 17:48:45,516 autoreload Watching for file changes with StatReloader
+ERROR 2025-10-02 17:48:50,102 log Internal Server Error: /estadisticas/madres
+Traceback (most recent call last):
+  File "C:\Users\alexa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\alexa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\estadisticas\views.py", line 27, in est_madres
+    madres_ordenadas = sorted([madre.toJSON() for madre in partos if fecha_inicio_iso <= madre.fecha_ingreso and fecha_termino_iso >= madre.fecha_ingreso ])
+TypeError: '<' not supported between instances of 'dict' and 'dict'
+ERROR 2025-10-02 17:48:50,104 basehttp "GET /estadisticas/madres?inicio=2023-02-23&termino=2025-09-08 HTTP/1.1" 500 71164
+INFO 2025-10-02 17:49:49,243 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\estadisticas\views.py changed, reloading.
+INFO 2025-10-02 17:49:50,203 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 17:49:51,590 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\estadisticas\views.py changed, reloading.
+INFO 2025-10-02 17:49:52,437 autoreload Watching for file changes with StatReloader
+ERROR 2025-10-02 17:49:58,375 log Internal Server Error: /estadisticas/madres
+Traceback (most recent call last):
+  File "C:\Users\alexa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\alexa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\estadisticas\views.py", line 27, in est_madres
+    madres_ordenadas = sorted([madre.toJSON() for madre in partos if fecha_inicio_iso <= madre.fecha_ingreso and fecha_termino_iso >= madre.fecha_ingreso ])
+TypeError: '<' not supported between instances of 'dict' and 'dict'
+ERROR 2025-10-02 17:49:58,377 basehttp "GET /estadisticas/madres?inicio=2023-02-23&termino=2025-09-08 HTTP/1.1" 500 71109
+INFO 2025-10-02 17:50:17,396 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\estadisticas\views.py changed, reloading.
+INFO 2025-10-02 17:50:18,193 autoreload Watching for file changes with StatReloader
+ERROR 2025-10-02 17:50:23,585 log Internal Server Error: /estadisticas/madres
+Traceback (most recent call last):
+  File "C:\Users\alexa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\alexa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\estadisticas\views.py", line 27, in est_madres
+    madres_ordenadas = sorted([madre.toJSON() for madre in partos if fecha_inicio_iso <= madre.fecha_ingreso and fecha_termino_iso >= madre.fecha_ingreso ])
+TypeError: '<' not supported between instances of 'dict' and 'dict'
+ERROR 2025-10-02 17:50:23,587 basehttp "GET /estadisticas/madres?inicio=2023-02-23&termino=2025-09-08 HTTP/1.1" 500 70797
+INFO 2025-10-02 17:50:57,549 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\estadisticas\views.py changed, reloading.
+INFO 2025-10-02 17:50:58,325 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 17:51:23,138 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\estadisticas\views.py changed, reloading.
+INFO 2025-10-02 17:51:24,005 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 17:51:25,462 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\estadisticas\views.py changed, reloading.
+INFO 2025-10-02 17:51:26,522 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 17:51:33,975 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\estadisticas\views.py changed, reloading.
+INFO 2025-10-02 17:51:34,743 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 17:51:45,223 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\estadisticas\views.py changed, reloading.
+INFO 2025-10-02 17:51:46,224 autoreload Watching for file changes with StatReloader
+ERROR 2025-10-02 17:51:50,226 log Internal Server Error: /estadisticas/madres
+Traceback (most recent call last):
+  File "C:\Users\alexa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\alexa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\estadisticas\views.py", line 27, in est_madres
+    madres_ordenadas = sorted([madre.toJSON() for madre in partos])
+TypeError: '<' not supported between instances of 'dict' and 'dict'
+ERROR 2025-10-02 17:51:50,229 basehttp "GET /estadisticas/madres?inicio=2023-02-23&termino=2025-09-08 HTTP/1.1" 500 70741
+INFO 2025-10-02 17:52:26,526 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\estadisticas\views.py changed, reloading.
+INFO 2025-10-02 17:52:27,274 autoreload Watching for file changes with StatReloader
+ERROR 2025-10-02 17:52:27,543 log Internal Server Error: /estadisticas/madres
+Traceback (most recent call last):
+  File "C:\Users\alexa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\alexa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\estadisticas\views.py", line 27, in est_madres
+    madres_ordenadas = sorted([madre.toJSON() for madre in partos])
+TypeError: '<' not supported between instances of 'dict' and 'dict'
+ERROR 2025-10-02 17:52:27,547 basehttp "GET /estadisticas/madres?inicio=2023-02-23&termino=2025-09-08 HTTP/1.1" 500 70429
+INFO 2025-10-02 17:52:36,838 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\estadisticas\views.py changed, reloading.
+INFO 2025-10-02 17:52:37,578 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 17:52:40,947 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\estadisticas\views.py changed, reloading.
+INFO 2025-10-02 17:52:41,725 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 17:53:50,616 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\estadisticas\views.py changed, reloading.
+INFO 2025-10-02 17:53:51,453 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 17:53:55,881 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\estadisticas\views.py changed, reloading.
+INFO 2025-10-02 17:53:56,616 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 17:54:48,111 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\estadisticas\views.py changed, reloading.
+INFO 2025-10-02 17:54:48,832 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 17:54:52,180 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\estadisticas\views.py changed, reloading.
+INFO 2025-10-02 17:54:52,890 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 17:54:59,319 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\estadisticas\views.py changed, reloading.
+INFO 2025-10-02 17:55:00,033 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 17:55:01,353 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\estadisticas\views.py changed, reloading.
+INFO 2025-10-02 17:55:02,169 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 17:55:08,591 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\estadisticas\views.py changed, reloading.
+INFO 2025-10-02 17:55:09,360 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 17:55:12,762 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\estadisticas\views.py changed, reloading.
+INFO 2025-10-02 17:55:13,648 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 17:55:17,395 basehttp "GET /estadisticas/madres?inicio=2023-02-23&termino=2025-09-08 HTTP/1.1" 200 681
+INFO 2025-10-02 17:55:18,297 basehttp "GET /estadisticas/madres?inicio=2023-02-23&termino=2025-09-08 HTTP/1.1" 200 681
+INFO 2025-10-02 17:58:34,455 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\estadisticas\views.py changed, reloading.
+INFO 2025-10-02 17:58:34,987 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 17:58:40,370 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\estadisticas\views.py changed, reloading.
+INFO 2025-10-02 17:58:40,988 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 17:58:42,266 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\estadisticas\views.py changed, reloading.
+INFO 2025-10-02 17:58:42,832 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 17:58:44,810 basehttp "GET /estadisticas/madres?inicio=2023-02-23&termino=2025-09-08 HTTP/1.1" 200 681
+INFO 2025-10-02 17:59:32,224 basehttp "GET /estadisticas/madres?inicio=2023-02-23&termino=2025-09-08 HTTP/1.1" 200 530
+INFO 2025-10-02 18:00:05,701 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\estadisticas\views.py changed, reloading.
+INFO 2025-10-02 18:00:06,196 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 18:00:12,421 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\estadisticas\views.py changed, reloading.
+INFO 2025-10-02 18:00:12,978 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 18:00:15,138 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\estadisticas\views.py changed, reloading.
+INFO 2025-10-02 18:00:15,658 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 18:00:24,931 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\estadisticas\views.py changed, reloading.
+INFO 2025-10-02 18:00:25,545 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 18:00:27,722 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\estadisticas\views.py changed, reloading.
+INFO 2025-10-02 18:00:28,244 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 18:00:30,532 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\estadisticas\views.py changed, reloading.
+INFO 2025-10-02 18:00:31,041 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 18:00:55,702 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\estadisticas\views.py changed, reloading.
+INFO 2025-10-02 18:00:56,188 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 18:01:00,528 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\estadisticas\views.py changed, reloading.
+INFO 2025-10-02 18:01:01,036 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 18:01:03,317 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\estadisticas\views.py changed, reloading.
+INFO 2025-10-02 18:01:03,857 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 18:01:05,000 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\estadisticas\views.py changed, reloading.
+INFO 2025-10-02 18:01:05,571 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 18:01:19,065 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\estadisticas\views.py changed, reloading.
+INFO 2025-10-02 18:01:19,683 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 18:01:20,808 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\estadisticas\views.py changed, reloading.
+INFO 2025-10-02 18:01:21,313 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 18:01:23,569 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\estadisticas\views.py changed, reloading.
+INFO 2025-10-02 18:01:24,097 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 18:01:25,240 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\estadisticas\views.py changed, reloading.
+INFO 2025-10-02 18:01:25,863 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 18:01:27,138 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\estadisticas\views.py changed, reloading.
+INFO 2025-10-02 18:01:27,688 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 18:01:29,981 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\estadisticas\views.py changed, reloading.
+INFO 2025-10-02 18:01:30,612 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 18:01:31,873 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\estadisticas\views.py changed, reloading.
+INFO 2025-10-02 18:01:32,496 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 18:01:50,071 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\estadisticas\views.py changed, reloading.
+INFO 2025-10-02 18:01:50,593 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 18:01:54,966 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\estadisticas\views.py changed, reloading.
+INFO 2025-10-02 18:01:55,471 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 18:01:57,740 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\estadisticas\views.py changed, reloading.
+INFO 2025-10-02 18:01:58,396 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 18:02:10,715 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\estadisticas\views.py changed, reloading.
+INFO 2025-10-02 18:02:11,221 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 18:02:17,626 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\estadisticas\views.py changed, reloading.
+INFO 2025-10-02 18:02:18,167 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 18:02:22,497 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\estadisticas\views.py changed, reloading.
+INFO 2025-10-02 18:02:23,060 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 18:02:30,448 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\estadisticas\views.py changed, reloading.
+INFO 2025-10-02 18:02:31,076 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 18:03:06,867 basehttp "GET /estadisticas/partos?inicio=2023-02-23&termino=2025-09-08 HTTP/1.1" 200 1431
+INFO 2025-10-02 18:03:25,904 basehttp "GET /estadisticas/partos?inicio=2023-02-23&termino=2025-09-08 HTTP/1.1" 200 1498
+INFO 2025-10-02 18:04:01,166 basehttp "GET /estadisticas/partos?inicio=2023-03-26&termino=2025-09-08 HTTP/1.1" 200 132
+INFO 2025-10-02 18:04:08,014 basehttp "GET /estadisticas/partos?inicio=2023-03-25&termino=2025-09-08 HTTP/1.1" 200 1498
+INFO 2025-10-02 18:04:32,846 basehttp "GET /estadisticas/madres?inicio=2023-03-25&termino=2025-09-08 HTTP/1.1" 200 681
+INFO 2025-10-02 18:04:52,173 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\estadisticas\views.py changed, reloading.
+INFO 2025-10-02 18:04:52,760 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 18:04:55,093 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\estadisticas\views.py changed, reloading.
+INFO 2025-10-02 18:04:55,659 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 18:04:57,946 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\estadisticas\views.py changed, reloading.
+INFO 2025-10-02 18:04:58,486 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 18:05:00,653 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\estadisticas\views.py changed, reloading.
+INFO 2025-10-02 18:05:01,172 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 18:05:03,322 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\estadisticas\views.py changed, reloading.
+INFO 2025-10-02 18:05:03,971 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 18:05:07,038 basehttp "GET /estadisticas/madres?inicio=2023-03-25&termino=2025-09-08 HTTP/1.1" 200 681
+INFO 2025-10-02 18:05:21,702 basehttp "GET /estadisticas/partos?inicio=2023-03-25&termino=2025-09-08 HTTP/1.1" 200 1498
+INFO 2025-10-02 18:05:59,327 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\estadisticas\views.py changed, reloading.
+INFO 2025-10-02 18:05:59,874 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 18:06:06,110 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\estadisticas\views.py changed, reloading.
+INFO 2025-10-02 18:06:06,701 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 18:06:09,887 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\estadisticas\views.py changed, reloading.
+INFO 2025-10-02 18:06:10,393 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 18:06:14,693 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\estadisticas\views.py changed, reloading.
+INFO 2025-10-02 18:06:15,203 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 18:06:16,478 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\estadisticas\views.py changed, reloading.
+INFO 2025-10-02 18:06:17,131 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 18:06:18,434 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\estadisticas\views.py changed, reloading.
+INFO 2025-10-02 18:06:18,995 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 18:06:20,256 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\estadisticas\views.py changed, reloading.
+INFO 2025-10-02 18:06:20,776 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 18:06:23,086 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\estadisticas\views.py changed, reloading.
+INFO 2025-10-02 18:06:23,670 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 18:06:25,968 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\estadisticas\views.py changed, reloading.
+INFO 2025-10-02 18:06:26,602 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 18:06:33,005 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\estadisticas\views.py changed, reloading.
+INFO 2025-10-02 18:06:33,664 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 18:06:39,030 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\estadisticas\views.py changed, reloading.
+INFO 2025-10-02 18:06:39,548 autoreload Watching for file changes with StatReloader
+ERROR 2025-10-02 18:06:43,158 log Internal Server Error: /estadisticas/nacidos
+Traceback (most recent call last):
+  File "C:\Users\alexa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\alexa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\estadisticas\views.py", line 115, in est_nacidos
+    nacidos_partos = [a.toJSON() for a in Nacido.objects.filter(fecha_ingreso__range=(fecha_inicio_iso, fecha_termino_iso))]
+                                          ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alexa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\alexa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\db\models\query.py", line 1493, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alexa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\db\models\query.py", line 1511, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alexa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\db\models\query.py", line 1518, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alexa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\db\models\sql\query.py", line 1646, in add_q
+    clause, _ = self._add_q(q_object, can_reuse)
+                ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alexa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\db\models\sql\query.py", line 1678, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ~~~~~~~~~~~~~~~~~^
+        child,
+        ^^^^^^
+    ...<7 lines>...
+        update_join_types=update_join_types,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\alexa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\db\models\sql\query.py", line 1526, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg, summarize)
+                                        ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\alexa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\db\models\sql\query.py", line 1333, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+                                ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alexa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\db\models\sql\query.py", line 1805, in names_to_path
+    raise FieldError(
+    ...<2 lines>...
+    )
+django.core.exceptions.FieldError: Cannot resolve keyword 'fecha_ingreso' into field. Choices are: id, nombre_completo, parto, parto_id, peso, sexo
+ERROR 2025-10-02 18:06:43,163 basehttp "GET /estadisticas/nacidos?inicio=2023-03-25&termino=2025-09-08 HTTP/1.1" 500 116638
+INFO 2025-10-02 18:07:05,345 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\estadisticas\views.py changed, reloading.
+INFO 2025-10-02 18:07:05,944 autoreload Watching for file changes with StatReloader
+ERROR 2025-10-02 18:07:18,503 log Internal Server Error: /estadisticas/nacidos
+Traceback (most recent call last):
+  File "C:\Users\alexa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\alexa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\estadisticas\views.py", line 116, in est_nacidos
+    femeninos = [a for a in nacidos_partos if a['sexo'] == 'femenino']
+                                              ~^^^^^^^^
+KeyError: 'sexo'
+ERROR 2025-10-02 18:07:18,505 basehttp "GET /estadisticas/nacidos?inicio=2023-03-25&termino=2025-09-08 HTTP/1.1" 500 72879
+INFO 2025-10-02 18:07:54,201 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\estadisticas\views.py changed, reloading.
+INFO 2025-10-02 18:07:54,798 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 18:08:07,318 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\estadisticas\views.py changed, reloading.
+INFO 2025-10-02 18:08:07,897 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 18:08:09,209 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\estadisticas\views.py changed, reloading.
+INFO 2025-10-02 18:08:09,732 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 18:10:46,198 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\estadisticas\views.py changed, reloading.
+INFO 2025-10-02 18:10:46,996 autoreload Watching for file changes with StatReloader
+ERROR 2025-10-02 18:10:49,418 log Internal Server Error: /estadisticas/nacidos
+Traceback (most recent call last):
+  File "C:\Users\alexa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\alexa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\estadisticas\views.py", line 115, in est_nacidos
+    nacidos_partos = [a.toJSON() for a in Nacido.objects.filter(parto_fecha_ingreso__range=(fecha_inicio_iso, fecha_termino_iso))]
+                                          ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alexa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\alexa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\db\models\query.py", line 1493, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alexa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\db\models\query.py", line 1511, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alexa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\db\models\query.py", line 1518, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alexa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\db\models\sql\query.py", line 1646, in add_q
+    clause, _ = self._add_q(q_object, can_reuse)
+                ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alexa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\db\models\sql\query.py", line 1678, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ~~~~~~~~~~~~~~~~~^
+        child,
+        ^^^^^^
+    ...<7 lines>...
+        update_join_types=update_join_types,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\alexa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\db\models\sql\query.py", line 1526, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg, summarize)
+                                        ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\alexa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\db\models\sql\query.py", line 1333, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+                                ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alexa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\db\models\sql\query.py", line 1805, in names_to_path
+    raise FieldError(
+    ...<2 lines>...
+    )
+django.core.exceptions.FieldError: Cannot resolve keyword 'parto_fecha_ingreso' into field. Choices are: id, nombre_completo, parto, parto_id, peso, sexo
+ERROR 2025-10-02 18:10:49,430 basehttp "GET /estadisticas/nacidos?inicio=2023-03-25&termino=2025-09-08 HTTP/1.1" 500 116794
+INFO 2025-10-02 18:10:55,935 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\estadisticas\views.py changed, reloading.
+INFO 2025-10-02 18:10:56,838 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 18:11:03,276 autoreload C:\Users\alexa\OneDrive\Escritorio\Cuarto Semesstre\Back-End\Ejercicios\Evaluacion 1\estadisticas\views.py changed, reloading.
+INFO 2025-10-02 18:11:04,267 autoreload Watching for file changes with StatReloader
+INFO 2025-10-02 18:11:05,793 basehttp "GET /estadisticas/nacidos?inicio=2023-03-25&termino=2025-09-08 HTTP/1.1" 200 756
+INFO 2025-10-02 18:23:11,820 basehttp - Broken pipe from ('127.0.0.1', 21621)
+INFO 2025-10-05 23:12:08,272 autoreload Watching for file changes with StatReloader
+WARNING 2025-10-05 23:12:10,997 log Not Found: /
+WARNING 2025-10-05 23:12:10,998 basehttp "GET / HTTP/1.1" 404 2462
+WARNING 2025-10-05 23:12:11,242 log Not Found: /favicon.ico
+WARNING 2025-10-05 23:12:11,243 basehttp "GET /favicon.ico HTTP/1.1" 404 2513
+INFO 2025-10-05 23:12:15,754 basehttp "GET /api/doctores/ HTTP/1.1" 200 478
+INFO 2025-10-05 23:12:19,768 basehttp "GET /api/doctores/ HTTP/1.1" 200 478
+WARNING 2025-10-05 23:12:23,448 log Not Found: /api/
+WARNING 2025-10-05 23:12:23,448 basehttp "GET /api/ HTTP/1.1" 404 4497
+INFO 2025-10-05 23:12:52,220 basehttp "GET /api/doctores/ HTTP/1.1" 200 478
+WARNING 2025-10-05 23:12:52,318 log Not Found: /favicon.ico
+WARNING 2025-10-05 23:12:52,319 basehttp "GET /favicon.ico HTTP/1.1" 404 2513
+INFO 2025-10-05 23:12:57,228 basehttp "GET /api/madres/ HTTP/1.1" 200 355
+INFO 2025-10-05 23:13:04,825 basehttp "GET /api/partos/ HTTP/1.1" 200 1396

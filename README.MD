@@ -1,8 +1,7 @@
 # Evaluacion 1: Proyecto Hospital
 
 - Se usa @csrf_exempt para permitir pruebas sin token CSRF
-- La API no usa base de datos, sino listas en memoria
-- La API se basa en indices, no contiene ID
+- La API usa base de datos 
 - Contiene un logger que registra las acciones en debug.log
 
 ## Instalacion
@@ -75,7 +74,7 @@ Crea un nuevo doctor
 - Datos Requeridos:
 
 1. nombre_completo = Pedro González
-2. run = 1234567-8
+2. run = 16234567-8
 3. especialidad = Pediatría
 4. edad = 40
 
@@ -93,7 +92,7 @@ Respuesta:
     'message': 'Creación exitosa', 
     'data': {
         "nombre_completo" = "Pedro González"
-        "run" = "1234567-8"
+        "run" = "16234567-8"
         "especialidad" = "Pediatría"
         "edad" = 40
     }

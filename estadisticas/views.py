@@ -1,13 +1,17 @@
 from django.shortcuts import render
 from django.http import HttpResponse, JsonResponse
 from django.template import loader
-from api.data import *
+from datetime import datetime
+from django.utils import timezone
+from api.models import Madre, Parto, Doctor, Nacido
+
 
 # Create your views here.
 
 def est_madres(request):
     metodo = request.method
     content_type = request.content_type
+
     match metodo:
         case 'GET':
             fecha_inicio = request.GET.get('inicio', None)
@@ -19,7 +23,13 @@ def est_madres(request):
                 fecha_termino_iso = datetime.fromisoformat(fecha_termino)
             except ValueError:
                 return HttpResponse('Formato de fecha inválido. Use YYYY-MM-DD')
-            madres_ordenadas = sorted([madre.indice_madre.toJSON() for madre in listaPartos if fecha_inicio_iso <=madre.fecha_ingreso and fecha_termino_iso >= madre.fecha_ingreso ], key=lambda x: int(x["edad"]))
+
+            partos = Parto.objects.filter(fecha_ingreso__range=(fecha_inicio_iso, fecha_termino_iso))
+            madres_ordenadas = sorted(
+                [parto.madre.toJSON() for parto in partos],
+                key=lambda x: x['edad']
+            )
+            print(madres_ordenadas)
             madres20 = [a for a in madres_ordenadas if int(a["edad"]) <= 20]
             madres2030 = [a for a in madres_ordenadas if 20 < int(a["edad"]) <= 30]
             madres3040 = [a for a in madres_ordenadas if 30 < int(a["edad"]) <= 40]
@@ -38,6 +48,7 @@ def est_madres(request):
                 "contador_3040": len(madres3040),
                 "contador_40": len(madres40),
                 }
+            
             match content_type:
                 case 'text/plain':
                     return HttpResponse(template.render(contexto, request))
@@ -69,16 +80,17 @@ def est_partos(request):
                 fecha_termino_iso = datetime.fromisoformat(fecha_termino)
             except ValueError:
                 return HttpResponse('Formato de fecha inválido. Use YYYY-MM-DD')
-            partos = [parto.toJSON() for parto in listaPartos if fecha_inicio_iso <= parto.fecha_ingreso and fecha_termino_iso >= parto.fecha_ingreso ]
+            partos = Parto.objects.filter(fecha_ingreso__range=(fecha_inicio_iso,fecha_termino_iso))
+            partosJSON = [a.toJSON() for a in partos]
             template = loader.get_template('estadisticas/partos.html')
-            contexto = {"partos":partos, "contador": len(partos), "inicio": fecha_inicio, "termino":fecha_termino}
+            contexto = {"partos":partosJSON, "contador": len(partosJSON), "inicio": fecha_inicio, "termino":fecha_termino}
             match content_type:
                 case 'text/plain':
                     return HttpResponse(template.render(contexto, request))
                 case 'application/json':
                     return JsonResponse({'data':{
                         "total_partos": len(partos),
-                        "partos": partos,
+                        "partos": partosJSON,
                         "rango": {"inicio": fecha_inicio, "termino":fecha_termino}
                     }})
                 case _:
@@ -100,7 +112,7 @@ def est_nacidos(request):
                 fecha_termino_iso = datetime.fromisoformat(fecha_termino)
             except ValueError:
                 return HttpResponse('Formato de fecha inválido. Use YYYY-MM-DD')
-            nacidos_partos = [a.toJSON() for a in listaNacidos if fecha_inicio_iso <= a.indice_parto.fecha_nacimiento and fecha_termino_iso >= a.indice_parto.fecha_nacimiento ]
+            nacidos_partos = [a.toJSON() for a in Nacido.objects.filter(parto__fecha_ingreso__range=(fecha_inicio_iso, fecha_termino_iso))]
             femeninos = [a for a in nacidos_partos if a['sexo'] == 'femenino']
             masculinos = [a for a in nacidos_partos if a['sexo'] == 'masculino']
 
